@@ -1,0 +1,5 @@
+proxmox_endpoint  = "https://<proxmox-tailscale-ip>:8006"
+proxmox_api_token = "root@pam!terraform=YOUR_TOKEN_HERE"
+proxmox_node      = "pve"
+proxmox_username  = "root"
+proxmox_address   = "<proxmox-tailscale-ip>"
