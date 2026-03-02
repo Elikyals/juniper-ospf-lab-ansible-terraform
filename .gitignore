@@ -1,16 +1,23 @@
 # Ansible secrets - credentials only
 ansible/group_vars/juniper.yml
 
+# Ansible generated files
+ansible/inventory/hosts-tf.ini
+
 # Terraform secrets
 terraform/.terraform/
 terraform/*.tfstate
 terraform/*.tfstate.backup
 terraform/*.tfvars
 
+# Terraform lock file
+terraform/.terraform.lock.hcl
+
 # Python
 __pycache__/
 *.pyc
 venv/
+.venv/
 
 # Vault
 .vault_pass
@@ -18,3 +25,12 @@ venv/
 # Editor
 .vscode/
 *.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Keep example files
+!ansible/group_vars/juniper.yml.example
+!terraform/terraform.tfvars.example

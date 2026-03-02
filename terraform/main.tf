@@ -97,3 +97,9 @@ resource "proxmox_virtual_environment_vm" "vsrx" {
     proxmox_virtual_environment_network_linux_bridge.vmbr13,
   ]
 }
+
+# Generate Ansible inventory
+resource "local_file" "ansible_inventory" {
+  content = file("${path.module}/inventory.tpl")
+  filename = "${path.module}/../ansible/inventory/hosts-tf.ini"
+}
