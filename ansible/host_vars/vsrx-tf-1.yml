@@ -1,12 +1,12 @@
 interfaces:
   - name: ge-0/0/0
-    ip: 10.0.12.2/30
-    description: "vSRX-1-link"
+    ip: 10.0.12.1/30
+    description: "vSRX-TF-2-link"
   - name: ge-0/0/1
-    ip: 10.0.23.1/30
-    description: "vSRX-3-link"
+    ip: 10.0.13.1/30
+    description: "vSRX-TF-3-link"
   - name: lo0
-    ip: 192.168.255.2/32
+    ip: 192.168.255.11/32
     description: "Loopback"
 
 ospf_interfaces:

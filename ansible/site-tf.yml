@@ -1,6 +1,5 @@
 ---
-
-- name: Configure Juniper OSPF Lab
+- name: Configure Terraform-provisioned Juniper OSPF Lab
   hosts: juniper
   gather_facts: false
 

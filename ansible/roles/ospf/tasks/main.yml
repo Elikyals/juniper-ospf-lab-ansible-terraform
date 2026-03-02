@@ -15,3 +15,8 @@
 - name: Display OSPF neighbors
   debug:
     msg: "{{ ospf_output.stdout_lines }}"
+
+- name: Configure security policies for OSPF
+  junipernetworks.junos.junos_config:
+    lines:
+      - set security zones security-zone trust host-inbound-traffic protocols ospf

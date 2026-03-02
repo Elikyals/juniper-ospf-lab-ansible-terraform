@@ -17,3 +17,9 @@
     lines:
       - "set system name-server 8.8.8.8"
       - "set system name-server 8.8.4.4"
+
+- name: Configure security policy trust to trust
+  junipernetworks.junos.junos_config:
+    lines:
+      - "set security policies from-zone trust to-zone trust policy allow-all match source-address any destination-address any application any"
+      - "set security policies from-zone trust to-zone trust policy allow-all then permit"

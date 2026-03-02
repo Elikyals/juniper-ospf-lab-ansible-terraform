@@ -12,3 +12,9 @@
     lines:
       - "set interfaces {{ item.name }} description \"{{ item.description }}\""
   loop: "{{ interfaces }}"
+
+- name: Assign interfaces to security zones
+  junipernetworks.junos.junos_config:
+    lines:
+      - "set security zones security-zone trust interfaces {{ item.name }} host-inbound-traffic system-services all"
+  loop: "{{ interfaces }}"
